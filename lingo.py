@@ -28,5 +28,19 @@ def update_gevonden_letters(raad, geheim, ingevuld):
 
 
 
+def maak_ballenbak(team):
+    nummers = list(range(1, 33))
+    if team == 1:
+        nummers = [n for n in nummers if n % 2 == 0]
+    else:
+        nummers = [n for n in nummers if n % 2 == 1]
+    groene = ['groen'] * 3
+    rode = ['rood'] * 3
+    return nummers + groene + rode
+
+
+
+
+
 
 
