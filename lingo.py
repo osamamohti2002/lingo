@@ -15,6 +15,7 @@ def controleer_poging(raad, geheim):
             feedback.append('geel')
         else:
             feedback.append('rood')
+    return feedback
 
 
 
@@ -23,7 +24,7 @@ def update_gevonden_letters(raad, geheim, ingevuld):
     nieuw = ingevuld[:]
     for i in range(len(geheim)):
         if raad[i] == geheim[i]:
-            nieuw[i] == geheim[i]
+            nieuw[i] = geheim[i]
     return nieuw
 
 
