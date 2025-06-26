@@ -18,7 +18,7 @@ def toon_feedback(raad, feedback):
         elif status == 'geel':
             gekleurd += f'\033[93m{letter}\033[0m'
         else:
-            gekleurd += f"\033[91mDit is rood\033[0m"
+            gekleurd += letter
     return gekleurd
 
 def geef_bingokaart_string(kaart):
@@ -55,6 +55,17 @@ def speel_woordronde(woord, input_functie):
         pogingen += 1
 
     return False, poging_resultaten
+
+print("Welkom bij Lingo!")
+team = int(input("Welk team speelt? (1 of 2): "))
+win_groen = 0
+verlies_rood = 0
+goed_geraden = 0
+fout_op_rij = 0
+
+ballenbak = maak_ballenbak(team)
+bingokaart = maak_bingokaart(team)
+
 
 
 
